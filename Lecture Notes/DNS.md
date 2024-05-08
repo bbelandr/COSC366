@@ -1,0 +1,1 @@
+People can have many identifiers, but on the internet, you have a IP address. DNS services convert from a hostname to an IP translation.
